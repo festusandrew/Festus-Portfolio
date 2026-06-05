@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festus Andrew</title>
+  <meta name="description" content="A sleek and modern portfolio template designed for creatives.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Theme initialization (prevents theme flash on load) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.documentElement.classList.add('light-mode');
+      }
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="custom-cursor-glow" id="custom-cursor-glow"></div>
+
+  <!-- Background Gradients / Glows -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <!-- FLOATING NAVIGATION -->
+  <header class="floating-header">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand" aria-label="Home logo">
+        <img src="https://res.cloudinary.com/dqfmlehav/image/upload/v1780701316/Frame_2_ploiwi.png" alt="logo Avatar"
+          class="brand-avatar">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#tools" class="nav-link">Tools</a>
+        <a href="#thoughts" class="nav-link">Thoughts</a>
+      </nav>
+
+      <div class="nav-ctas">
+        <a href="#contact" class="btn btn-primary">Let's Talk</a>
+        <button id="theme-toggle" class="theme-switch" aria-label="Toggle Theme">
+          <div class="switch-handle"></div>
+          <span class="switch-icon sun-icon-wrapper">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
+              </path>
+            </svg>
+          </span>
+          <span class="switch-icon moon-icon-wrapper">
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE OVERLAY NAVIGATION -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <nav class="mobile-nav-links">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#projects" class="mobile-nav-link">Projects</a>
+      <a href="#experience" class="mobile-nav-link">Experience</a>
+      <a href="#tools" class="mobile-nav-link">Tools</a>
+      <a href="#thoughts" class="mobile-nav-link">Thoughts</a>
+      <a href="#contact" class="mobile-nav-link">Let's Talk</a>
+    </nav>
+  </div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="main-layout" id="home">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-card hero-intro">
+        <div class="profile-header">
+          <div class="profile-title-group">
+            <h2 class="engineer-name">Festus Andrew</h2>
+            <p class="engineer-subtitle">A Design Engineer who has built and developed countless innovative solutions.
+            </p>
+          </div>
+        </div>
+
+        <h1 class="hero-main-title">
+          <span>DESIGN</span>
+          <span class="accent-text">ENGINEER</span>
+        </h1>
+
+        <p class="hero-description">
+          Design Engineer with over 4 years of experience focusing on user experience and design systems to creating
+          user-centered design in SaaS products, Real Estate and EdTech solutions.
+        </p>
+
+        <!-- Hero Social Links & Downloadable Resume -->
+        <div class="hero-socials-container">
+          <div class="hero-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-linkedin">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-github">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+            </a>
+            <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Dribbble">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-dribbble">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path
+                  d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.49-11.05 1-11.6 8.56">
+                </path>
+              </svg>
+            </a>
+          </div>
+          <a href="#" class="btn btn-secondary btn-resume" download="Festus_Andrew_Resume.pdf"
+            aria-label="Download Resume">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download Resume
+          </a>
+        </div>
+
+        <!-- Stats Grid inside Hero -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3 class="stat-number">+4</h3>
+            <p class="stat-label">YEARS OF EXPERIENCE</p>
+          </div>
+          <div class="stat-card">
+            <h3 class="stat-number">+12</h3>
+            <p class="stat-label">PROJECTS COMPLETED</p>
+          </div>
+          <div class="stat-card">
+            <h3 class="stat-number">+4</h3>
+            <p class="stat-label">WORLDWIDE CLIENTS</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Featured Media Card -->
+      <div class="hero-card hero-media">
+        <div class="image-wrapper">
+          <img
+            src="https://res.cloudinary.com/dqfmlehav/image/upload/v1780700402/ChatGPT_Image_Jun_5_2026_11_57_19_PM_qmdpgb.png?width=1000"
+            alt="Festus Andrew Portrait" class="hero-portrait">
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE BANNERS -->
+    <section class="marquee-section">
+      <div class="marquee marquee-left">
+        <div class="marquee-track">
+          <span>DYNAMIC ANIMATION &bull; FRONTEND ENGINEER &bull; UI/UX DESIGN &bull; DYNAMIC
+            ANIMATION &bull; FRONTEND ENGINEER &bull; UI/UX DESIGN &bull; </span>
+          <span>DYNAMIC ANIMATION &bull; FRONTEND ENGINEER &bull; UI/UX DESIGN &bull; DYNAMIC
+            ANIMATION &bull; FRONTEND ENGINEER &bull; UI/UX DESIGN &bull; </span>
+        </div>
+      </div>
+      <div class="marquee marquee-right">
+        <div class="marquee-track">
+          <span>FRAMER &bull; FIGMA &bull; WORDPRESS &bull; REACTJS &bull; NEXTJS &bull; CSS3 &bull; HTML5 &bull; FRAMER
+            &bull; FIGMA &bull; WORDPRESS &bull; REACTJS &bull; NEXTJS &bull; CSS3 &bull; HTML5 &bull; </span>
+          <span>FRAMER &bull; FIGMA &bull; WORDPRESS &bull; REACTJS &bull; NEXTJS &bull; CSS3 &bull; HTML5 &bull; FRAMER
+            &bull; FIGMA &bull; WORDPRESS &bull; REACTJS &bull; NEXTJS &bull; CSS3 &bull; HTML5 &bull; </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section-container" id="projects">
+      <div class="section-header">
+        <span class="section-tag">PORTFOLIO</span>
+        <h2 class="section-title">RECENT PROJECTS</h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <div class="project-card">
+          <div class="project-image-box">
+            <img src="https://framerusercontent.com/images/5Ra4AFZmEJOkMGLAEjkRXt2oqF4.png" alt="Majd Portfolio Project"
+              class="project-img">
+            <div class="project-badge">Featured</div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <h3 class="project-title">Majd</h3>
+              <p class="project-desc">Free Portfolio Template</p>
+            </div>
+            <div class="project-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card">
+          <div class="project-image-box">
+            <img src="https://framerusercontent.com/images/4mYEXU91rLBNKIW9k6hZh16l7Q.jpeg" alt="Damas Framer Project"
+              class="project-img">
+            <div class="project-badge">Remix</div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <h3 class="project-title">Damas</h3>
+              <p class="project-desc">Free Framer Template</p>
+            </div>
+            <div class="project-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card">
+          <div class="project-image-box">
+            <img src="https://framerusercontent.com/images/SvTAZZonMqViqF7fP6GK7CWmL84.png" alt="NajmAI SaaS Project"
+              class="project-img">
+            <div class="project-badge">Premium</div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <h3 class="project-title">NajmAI</h3>
+              <p class="project-desc">SaaS Framer Template</p>
+            </div>
+            <div class="project-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="project-card">
+          <div class="project-image-box">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Aerukart E-commerce Project"
+              class="project-img">
+            <div class="project-badge">Web App</div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <h3 class="project-title">Aerukart</h3>
+              <p class="project-desc">Premium E-commerce Web App</p>
+            </div>
+            <div class="project-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 5 -->
+        <div class="project-card">
+          <div class="project-image-box">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="MpoweredCare Health Project"
+              class="project-img">
+            <div class="project-badge">Dashboard</div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <h3 class="project-title">MpoweredCare</h3>
+              <p class="project-desc">Healthcare Portal</p>
+            </div>
+            <div class="project-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 6 -->
+        <div class="project-card">
+          <div class="project-image-box">
+            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Zenith Agency Project"
+              class="project-img">
+            <div class="project-badge">Studio</div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <h3 class="project-title">Zenith</h3>
+              <p class="project-desc">Creative Design Agency</p>
+            </div>
+            <div class="project-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination Controls -->
+      <div class="pagination-container">
+        <button class="pagination-btn prev-btn" id="project-prev" aria-label="Previous Page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="pagination-pages" id="project-page-numbers">
+          <!-- Page numbers rendered dynamically by Javascript -->
+        </div>
+        <button class="pagination-btn next-btn" id="project-next" aria-label="Next Page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section-container" id="experience">
+      <div class="section-header">
+        <span class="section-tag">JOURNEY</span>
+        <h2 class="section-title">+4 YEARS OF EXPERIENCE</h2>
+      </div>
+
+      <div class="experience-timeline">
+        <!-- Experience Item 1 -->
+        <div class="experience-card">
+          <div class="exp-header">
+            <div class="exp-brand">
+              <div class="exp-dot"></div>
+              <h3 class="exp-company">PixelForge Studios</h3>
+            </div>
+            <span class="exp-duration">Jan 2020 - Present</span>
+          </div>
+          <div class="exp-body">
+            <h4 class="exp-role">Lead Design Engineer</h4>
+            <p class="exp-text">Led the design team in creating user-centric mobile and web applications, improving the
+              user experience and increasing user engagement.</p>
+          </div>
+        </div>
+
+        <!-- Experience Item 2 -->
+        <div class="experience-card">
+          <div class="exp-header">
+            <div class="exp-brand">
+              <div class="exp-dot"></div>
+              <h3 class="exp-company">BlueWave Innovators</h3>
+            </div>
+            <span class="exp-duration">Jun 2017 - Dec 2019</span>
+          </div>
+          <div class="exp-body">
+            <h4 class="exp-role">Senior Frontend Engineer &amp; UI Specialist</h4>
+            <p class="exp-text">Developed and implemented design strategies for new product lines, collaborated closely
+              with engineers and product managers.</p>
+          </div>
+        </div>
+
+        <!-- Experience Item 3 -->
+        <div class="experience-card">
+          <div class="exp-header">
+            <div class="exp-brand">
+              <div class="exp-dot"></div>
+              <h3 class="exp-company">TrendCraft Solutions</h3>
+            </div>
+            <span class="exp-duration">Mar 2015 - May 2017</span>
+          </div>
+          <div class="exp-body">
+            <h4 class="exp-role">UI Designer &amp; Web Developer</h4>
+            <p class="exp-text">Designed user interfaces for e-commerce platforms, focusing on enhancing usability and
+              visual appeal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS SECTION -->
+    <section class="section-container" id="tools">
+      <div class="section-header">
+        <span class="section-tag">WORKFLOW</span>
+        <h2 class="section-title">PREMIUM TOOLS</h2>
+      </div>
+
+      <div class="tools-grid">
+        <!-- Tool 1: Figma -->
+        <div class="tool-card">
+          <div class="tool-icon-wrapper">
+            <img src="https://framerusercontent.com/images/SvTAZZonMqViqF7fP6GK7CWmL84.png" alt="Figma"
+              class="tool-icon">
+          </div>
+          <div class="tool-meta">
+            <h3 class="tool-name">Figma</h3>
+            <p class="tool-desc">Design Tool</p>
+          </div>
+        </div>
+
+        <!-- Tool 2: Framer -->
+        <div class="tool-card">
+          <div class="tool-icon-wrapper">
+            <img src="https://framerusercontent.com/images/ay9QMj9AVG8gxBjilndTmDdmeQ.png" alt="Framer"
+              class="tool-icon">
+          </div>
+          <div class="tool-meta">
+            <h3 class="tool-name">Framer</h3>
+            <p class="tool-desc">Website Builder</p>
+          </div>
+        </div>
+
+        <!-- Tool 3: Lemon Squeezy -->
+        <div class="tool-card">
+          <div class="tool-icon-wrapper">
+            <img src="https://framerusercontent.com/images/U1s9zT0tOtXbjdWvMrIgPFH0TyM.png" alt="Lemon Squeezy"
+              class="tool-icon">
+          </div>
+          <div class="tool-meta">
+            <h3 class="tool-name">Lemon Squeezy</h3>
+            <p class="tool-desc">Payments Provider</p>
+          </div>
+        </div>
+
+        <!-- Tool 4: ChatGPT -->
+        <div class="tool-card">
+          <div class="tool-icon-wrapper">
+            <img src="https://framerusercontent.com/images/MViiiLyIvL8tvy7d1XtOsM32o.png" alt="ChatGPT"
+              class="tool-icon">
+          </div>
+          <div class="tool-meta">
+            <h3 class="tool-name">ChatGPT</h3>
+            <p class="tool-desc">AI Assistant</p>
+          </div>
+        </div>
+
+        <!-- Tool 5: Notion -->
+        <div class="tool-card">
+          <div class="tool-icon-wrapper">
+            <img src="https://framerusercontent.com/images/iP5FTKjb84EsPLiEwbrAY7NEy44.png" alt="Notion"
+              class="tool-icon">
+          </div>
+          <div class="tool-meta">
+            <h3 class="tool-name">Notion</h3>
+            <p class="tool-desc">Productivity Tool</p>
+          </div>
+        </div>
+
+        <!-- Tool 6: Next.js -->
+        <div class="tool-card">
+          <div class="tool-icon-wrapper">
+            <img src="https://framerusercontent.com/images/MnQFYNLxlgT4EvY2ctcJfHAXZA.png" alt="Next.js"
+              class="tool-icon">
+          </div>
+          <div class="tool-meta">
+            <h3 class="tool-name">Nextjs</h3>
+            <p class="tool-desc">React framework</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THOUGHTS SECTION -->
+    <section class="section-container" id="thoughts">
+      <div class="section-header">
+        <span class="section-tag">RESOURCES</span>
+        <h2 class="section-title">DESIGN THOUGHTS</h2>
+      </div>
+
+      <div class="blog-grid">
+        <!-- Post 1 -->
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">Apr 8, 2022</span>
+            <span class="blog-read-time">6min read</span>
+          </div>
+          <h3 class="blog-title">Starting and Growing a Career in Web Design</h3>
+          <p class="blog-excerpt">As the internet continues to develop and grow exponentially, jobs related to the
+            industry do too, particularly those that relate to web design and development.</p>
+          <a href="#" class="blog-link">
+            <span>Read Article</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">Mar 15, 2022</span>
+            <span class="blog-read-time">6min read</span>
+          </div>
+          <h3 class="blog-title">Create a Landing Page That Performs Great</h3>
+          <p class="blog-excerpt">Whether you work in marketing, sales, or product design, you understand the importance
+            of a quality landing page. Landing pages are standalone websites used to generate leads or sales.</p>
+          <a href="#" class="blog-link">
+            <span>Read Article</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">Feb 28, 2022</span>
+            <span class="blog-read-time">6min read</span>
+          </div>
+          <h3 class="blog-title">How Can Designers Prepare for the Future?</h3>
+          <p class="blog-excerpt">Whether you work in marketing, sales, or product design, you understand the importance
+            of a quality landing page. Landing pages help you increase your conversion rate and overall revenue.</p>
+          <a href="#" class="blog-link">
+            <span>Read Article</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section-container" id="contact">
+      <div class="contact-card">
+        <div class="contact-info">
+          <span class="section-tag">COLLABORATION</span>
+          <h2 class="contact-title">LET'S WORK<br><span class="accent-text">TOGETHER</span></h2>
+          <p class="contact-desc">Got a project in mind? Fill out the form or send me an email, and let's bring your
+            vision to life.</p>
+          <div class="contact-email">hello@aaabad.design</div>
+        </div>
+
+        <div class="contact-form-box">
+          <form id="contact-form" class="primary-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name">Name</label>
+                <input type="text" id="form-name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="form-email">Email</label>
+                <input type="email" id="form-email" placeholder="john@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="form-budget">Budget</label>
+              <select id="form-budget" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="under-3k">Under $3k</option>
+                <option value="3k-5k">$3k - $5k</option>
+                <option value="5k-10k">$5k - $10k</option>
+                <option value="over-10k">$10k+</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" rows="4" placeholder="Tell me about your project..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-submit" id="btn-submit">Submit</button>
+          </form>
+
+          <!-- Success Notification popup inside form box -->
+          <div class="form-success-alert" id="form-success-alert">
+            <div class="alert-icon">✓</div>
+            <div class="alert-message">
+              <h4>Message Sent!</h4>
+              <p>Thank you for reaching out. I'll get back to you shortly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-copy">
+        Made by <a href="https://sawad.framer.website/" target="_blank" rel="noopener" class="footer-link">Templyo</a> |
+        Powered by <a href="https://framer.com" target="_blank" rel="noopener" class="footer-link">Framer</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#" class="social-link">Twitter</a>
+        <a href="#" class="social-link">LinkedIn</a>
+        <a href="#" class="social-link">Dribbble</a>
+        <a href="#" class="social-link">Github</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Behavior File -->
+  <script src="app.js"></script>
+</body>
+
+</html>
