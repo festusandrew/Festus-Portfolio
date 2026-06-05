@@ -1,7 +1,7 @@
 {
-  "name": "sawad-portfolio-clone",
+  "name": "festus-portfolio",
   "version": "1.0.0",
-  "description": "Premium clone of the Sawad portfolio website",
+  "description": "Festus Andrew design engineer portfolio website",
   "main": "index.html",
   "scripts": {
     "dev": "vite"

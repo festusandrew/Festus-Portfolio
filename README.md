@@ -1,6 +1,6 @@
-# Festus Andrew Portfolio Clone — Developer & Architecture Guide
+# Festus Andrew Portfolio — Developer & Architecture Guide
 
-Welcome to the documentation for the **Festus Andrew Portfolio Clone**, a high-fidelity, premium website based on the popular **Sawad** Framer portfolio template. 
+Welcome to the documentation for the **Festus Andrew Portfolio**, a high-fidelity, premium custom personal website. 
 
 This project is built using semantic HTML5, custom Vanilla CSS, and modern interactive Vanilla JavaScript. It is configured to run locally on a high-performance developer server (Vite) and is pushed to Git version control.
 
@@ -52,7 +52,7 @@ Festus-Portfolio/
 
 ### 1. Theme Toggle System (Light & Dark Mode)
 * **Default Mode:** Dark mode is set as the absolute primary default, ignoring OS system-level preferences (`prefers-color-scheme`) to maintain the brand's dark aesthetic.
-* **Early Head Injection:** An inline theme-detection script runs in the `<head>` of [index.html](file:///c:/Users/Great%20Joe%20Computers/.gemini/antigravity-ide/scratch/sawad-portfolio-clone/index.html) before elements render. This prevents visual flashes of unstyled theme layouts if a visitor prefers the light theme.
+* **Early Head Injection:** An inline theme-detection script runs in the `<head>` of [index.html](index.html) before elements render. This prevents visual flashes of unstyled theme layouts if a visitor prefers the light theme.
 * **Sliding Toggle Switch:** Next to the **Let's Talk** button in the floating header, a custom pill button (`.theme-switch`) contains both Sun and Moon icons. A circular handle (`.switch-handle`) slides between them on toggle, transitioning from neon orange (dark mode) to lime green (light mode).
 * **Persistent Preferences:** The user's selection is saved in `localStorage` under the key `theme`.
 
