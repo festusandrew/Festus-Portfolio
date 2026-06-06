@@ -640,6 +640,8 @@ html.light-mode .social-icon-btn:hover {
   flex-direction: column;
   transition: var(--transition-smooth);
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .project-card:hover {
@@ -1685,4 +1687,271 @@ html.light-mode .page-num-btn.active {
   box-shadow: 0 4px 12px rgba(102, 156, 0, 0.2);
 }
 
+/* ==========================================================================
+   PROJECT CASE STUDY MODAL
+   ========================================================================== */
 
+/* Overlay */
+.case-study-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 40px 20px;
+}
+
+.case-study-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal Container */
+.case-study-modal {
+  width: 100%;
+  max-width: 860px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  transform: translateY(40px) scale(0.97);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.case-study-overlay.active .case-study-modal {
+  transform: translateY(0) scale(1);
+}
+
+/* Close Button */
+.case-study-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.case-study-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Hero Banner */
+.cs-hero {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+}
+
+.cs-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--bg-color) 0%, transparent 60%);
+}
+
+.cs-hero-content {
+  position: absolute;
+  bottom: 32px;
+  left: 40px;
+  right: 40px;
+  z-index: 2;
+}
+
+.cs-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--accent-orange);
+  color: #ffffff;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.cs-title {
+  font-family: var(--font-title);
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.cs-date {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+/* Content Body */
+.cs-body {
+  padding: 40px;
+}
+
+.cs-section {
+  margin-bottom: 48px;
+}
+
+.cs-section:last-of-type {
+  margin-bottom: 32px;
+}
+
+.cs-section-tag {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.cs-section-title {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.cs-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* Image Gallery */
+.cs-image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.cs-image-gallery img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  object-fit: cover;
+  aspect-ratio: 16/10;
+  transition: var(--transition-smooth);
+}
+
+.cs-image-gallery img:hover {
+  transform: scale(1.02);
+  border-color: var(--accent-lime);
+  box-shadow: 0 8px 24px rgba(197, 255, 65, 0.08);
+}
+
+/* GitHub CTA */
+.cs-cta {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
+.cs-github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: var(--accent-lime);
+  color: #151312;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.cs-github-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(197, 255, 65, 0.25);
+}
+
+/* Body scroll lock when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Light Mode Overrides */
+html.light-mode .case-study-overlay {
+  background: rgba(247, 246, 243, 0.7);
+}
+
+html.light-mode .case-study-close {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+html.light-mode .case-study-close:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+html.light-mode .cs-github-btn {
+  background: var(--accent-lime);
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cs-hero {
+    height: 220px;
+  }
+  .cs-hero-content {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+  .cs-title {
+    font-size: 1.6rem;
+  }
+  .cs-body {
+    padding: 24px;
+  }
+  .cs-image-gallery {
+    grid-template-columns: 1fr;
+  }
+  .case-study-overlay {
+    padding: 20px 10px;
+  }
+}

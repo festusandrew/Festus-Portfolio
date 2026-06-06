@@ -296,4 +296,165 @@ document.addEventListener('DOMContentLoaded', () => {
     showProjectPage(1);
   }
 
+  // ==========================================
+  // 7. PROJECT CASE STUDY MODAL
+  // ==========================================
+  const caseStudyData = {
+    'Eiieni': {
+      title: 'Eiieni',
+      badge: 'TypeScript',
+      date: 'February 2026 — Present',
+      heroImg: 'images/eiieni.png',
+      problem: 'Visually impaired users struggle to interact with digital content that relies heavily on visual cues. Existing accessibility tools often feel bolted on and fail to provide a seamless, integrated experience that truly empowers users to navigate visual interfaces independently.',
+      role: 'Lead Frontend Developer & UI/UX Designer — Responsible for architecting the frontend application, designing the user interface with accessibility-first principles, and integrating AI-powered visual description APIs into the product workflow.',
+      solution: 'Built a TypeScript-based web application that uses computer vision APIs to analyze and describe visual content in real-time. The app features a clean, high-contrast interface with screen reader optimizations, keyboard navigation support, and customizable description verbosity levels.',
+      process: 'I started by conducting accessibility audits of existing tools to identify pain points. Then I mapped out user flows for different impairment levels, created low-fidelity wireframes focused on simplicity, and iterated through 3 major design revisions based on user testing feedback. The color palette was chosen for maximum contrast ratios exceeding WCAG AAA standards.',
+      processImages: ['images/eiieni.png', 'images/eiieni-process.png'],
+      outcome: 'Delivered a fully functional MVP that processes images in under 2 seconds with 94% description accuracy. The application has received positive feedback from beta testers in the accessibility community and is actively being developed with planned mobile support.',
+      githubUrl: 'https://github.com/festusandrew/Eiieni'
+    },
+    'HR Advisory': {
+      title: 'HR Advisory',
+      badge: 'TypeScript',
+      date: 'May 2026',
+      heroImg: 'images/hr-advisory.png',
+      problem: 'HR teams were overwhelmed managing client inquiries through email and spreadsheets. There was no centralized system to track ticket status, assign tasks, or measure response times — leading to missed deadlines and poor client satisfaction.',
+      role: 'Full-Stack Developer — Designed and built the entire application from database schema to frontend interface. Implemented the ticket lifecycle management system, real-time notifications, and the analytics dashboard.',
+      solution: 'Developed a full-stack TypeScript application with a kanban-style task board where clients submit tickets and HR professionals manage them through configurable workflow stages. Features include real-time status updates, priority tagging, SLA tracking, and automated email notifications.',
+      process: 'I began by interviewing HR professionals to understand their existing workflow bottlenecks. I mapped the ticket lifecycle (New → In Progress → Resolved → Closed) and designed the database schema around it. The frontend was built with a focus on information density — showing the right data at the right time without overwhelming the user.',
+      processImages: ['images/hr-advisory.png', 'images/hr-advisory-process.png'],
+      outcome: 'Successfully deployed to production on Vercel. The platform reduced average ticket resolution time by streamlining communication between clients and HR teams. Currently live at hr-advisory.vercel.app.',
+      githubUrl: 'https://github.com/festusandrew/HR-Advisory'
+    },
+    'Care Management': {
+      title: 'Care Management',
+      badge: 'TypeScript',
+      date: 'May 2026',
+      heroImg: 'images/care-management.png',
+      problem: 'Healthcare facilities needed a modern, digital-first approach to managing patient records, scheduling appointments, and tracking health metrics. Legacy paper-based systems were error-prone and made it difficult to share information across care teams.',
+      role: 'Frontend Developer & System Architect — Led the frontend development, designed the component architecture, and built the patient dashboard with real-time health metrics visualization.',
+      solution: 'Built a comprehensive care management platform using TypeScript with a modular component architecture. The system features patient record management, appointment scheduling, health metrics dashboards with visual charts, and role-based access controls for different care team members.',
+      process: 'I researched healthcare UX best practices and HIPAA compliance requirements. The design process focused on reducing cognitive load for busy healthcare workers — using color-coded status indicators, progressive disclosure patterns, and a sidebar navigation that adapts based on user role. Each component was designed to be reusable across different care facility configurations.',
+      processImages: ['images/care-management.png'],
+      outcome: 'Delivered a functional healthcare management interface that centralizes patient data and improves care team coordination. The modular architecture allows easy customization for different facility types and regulatory requirements.',
+      githubUrl: 'https://github.com/festusandrew/Care-Management'
+    },
+    'Locum': {
+      title: 'Locum',
+      badge: 'TypeScript',
+      date: 'May 2026',
+      heroImg: 'images/locum.png',
+      problem: 'Healthcare professionals looking for temporary shift work (locum positions) had no efficient platform to discover, filter, and apply for available shifts. Facilities also struggled to fill last-minute openings quickly.',
+      role: 'Full-Stack Developer — Built the shift listing system, application workflow, calendar integration, and the matching algorithm that connects professionals with relevant openings based on speciality and location.',
+      solution: 'Created a shift marketplace platform where healthcare facilities post available shifts and professionals can browse, filter by speciality/location/time, and apply with a single click. The system includes a calendar view for scheduling, automated conflict detection, and application status tracking.',
+      process: 'I started by analyzing job marketplace UX patterns from platforms like Indeed and LinkedIn, then adapted them for the healthcare context where speed of matching is critical. The UI was designed for mobile-first usage since many locum workers browse shifts on their phones between assignments. Filter controls were prioritized above the fold for quick discovery.',
+      processImages: ['images/locum.png'],
+      outcome: 'Built a complete shift booking MVP that streamlines the connection between healthcare facilities and temporary professionals. The platform reduces the time-to-fill for urgent shifts and gives professionals a centralized hub for managing their locum work.',
+      githubUrl: 'https://github.com/festusandrew/Locum'
+    },
+    'Endyy': {
+      title: 'Endyy',
+      badge: 'TypeScript',
+      date: 'January 2026 — Present',
+      heroImg: 'images/endyy.png',
+      problem: 'A local bakery business needed an online presence to showcase their products, accept custom cake orders, and manage their growing customer base. Their existing social media presence alone was insufficient for handling order details and customization requests.',
+      role: 'Lead Developer & Designer — Designed the brand identity for the web platform, built the product showcase, and implemented the custom order form with detailed specification options for cake customization.',
+      solution: 'Developed a visually rich e-commerce web application tailored for a bakery business. Features include a product gallery with high-quality imagery, a multi-step custom order form, pricing calculator, and an admin dashboard for order management. The design emphasizes warm, appetizing aesthetics with gold and brown tones.',
+      process: 'I worked closely with the business owner to understand their product categories, pricing structure, and most common customization requests. The design process started with mood boards inspired by premium bakery brands, then moved into high-fidelity mockups that emphasized food photography. The order form was designed to progressively collect details (size → flavor → design → delivery) to avoid overwhelming customers.',
+      processImages: ['images/endyy.png'],
+      outcome: 'Launched a beautiful, functional bakery e-commerce platform that elevated the business\'s online presence. The custom order form significantly reduced back-and-forth communication about order specifications and helped streamline the fulfillment process.',
+      githubUrl: 'https://github.com/festusandrew/Endyy'
+    },
+    'Aika Bot': {
+      title: 'Aika Bot',
+      badge: 'JavaScript',
+      date: 'May 2026',
+      heroImg: 'images/aika-bot.png',
+      problem: 'Manual testing of conversational AI responses was time-consuming and inconsistent. There was a need for an automated testing bot that could simulate user interactions, validate responses, and report test results in a structured format.',
+      role: 'Solo Developer — Designed the bot architecture, implemented the test scripting engine, and built the conversation simulation framework with configurable test scenarios.',
+      solution: 'Built a JavaScript-based test automation bot that simulates user conversations, validates AI responses against expected outputs, and generates detailed test reports. Features include configurable test scenarios, response pattern matching, and automated regression testing capabilities.',
+      process: 'I analyzed common patterns in conversational AI failures — misunderstood intents, incorrect entity extraction, and context loss. The bot was designed around a scenario-based testing framework where each test case defines an input, expected response pattern, and acceptance criteria. The architecture was kept lightweight using vanilla JavaScript to minimize dependencies.',
+      processImages: ['images/aika-bot.png'],
+      outcome: 'Delivered a functional test automation bot that can run predefined conversation scenarios and report pass/fail results. The tool reduced manual testing effort and improved the consistency of conversational AI quality assurance.',
+      githubUrl: 'https://github.com/festusandrew/aika-test-bot'
+    }
+  };
+
+  const overlay = document.getElementById('case-study-overlay');
+  const modal = document.getElementById('case-study-modal');
+  const closeBtn = document.getElementById('case-study-close');
+
+  const openCaseStudy = (projectName) => {
+    const data = caseStudyData[projectName];
+    if (!data) return;
+
+    // Populate modal
+    document.getElementById('cs-hero-img').src = data.heroImg;
+    document.getElementById('cs-hero-img').alt = data.title;
+    document.getElementById('cs-badge').textContent = data.badge;
+    document.getElementById('cs-title').textContent = data.title;
+    document.getElementById('cs-date').textContent = data.date;
+    document.getElementById('cs-problem').textContent = data.problem;
+    document.getElementById('cs-role').textContent = data.role;
+    document.getElementById('cs-solution').textContent = data.solution;
+    document.getElementById('cs-process').textContent = data.process;
+    document.getElementById('cs-outcome').textContent = data.outcome;
+    document.getElementById('cs-github-link').href = data.githubUrl;
+
+    // Populate process images
+    const gallery = document.getElementById('cs-process-images');
+    gallery.innerHTML = '';
+    if (data.processImages && data.processImages.length > 0) {
+      data.processImages.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = data.title + ' design process';
+        img.loading = 'lazy';
+        gallery.appendChild(img);
+      });
+    }
+
+    // Show modal
+    overlay.classList.add('active');
+    document.body.classList.add('modal-open');
+    
+    // Scroll modal to top
+    overlay.scrollTop = 0;
+  };
+
+  const closeCaseStudy = () => {
+    overlay.classList.remove('active');
+    document.body.classList.remove('modal-open');
+  };
+
+  // Attach click handlers to project cards
+  projectCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const titleEl = card.querySelector('.project-title');
+      if (titleEl) {
+        openCaseStudy(titleEl.textContent.trim());
+      }
+    });
+  });
+
+  // Close handlers
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeCaseStudy);
+  }
+  if (overlay) {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        closeCaseStudy();
+      }
+    });
+  }
+  
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) {
+      closeCaseStudy();
+    }
+  });
+
 });
