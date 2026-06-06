@@ -1291,9 +1291,35 @@ html.light-mode .social-icon-btn:hover {
     display: none; /* Hide default inline links */
   }
   
-  /* Hide "Let's Talk" CTA on mobile, keep theme toggle */
+  /* Shrink Let's Talk button to fit mobile header */
   .nav-cta-talk {
-    display: none !important;
+    font-size: 0.78rem;
+    padding: 8px 14px;
+    border-radius: 16px;
+    white-space: nowrap;
+  }
+
+  /* Tighten the CTA group gap on mobile */
+  .nav-ctas {
+    gap: 8px;
+  }
+
+  /* Shrink the theme switch slightly on mobile */
+  .theme-switch {
+    width: 60px;
+    height: 34px;
+  }
+
+  .switch-handle {
+    width: 26px;
+    height: 26px;
+    top: 4px;
+    left: 4px;
+    transform: translateX(24px); /* dark mode position */
+  }
+
+  html.light-mode .switch-handle {
+    transform: translateX(0);
   }
   
   .mobile-toggle {
