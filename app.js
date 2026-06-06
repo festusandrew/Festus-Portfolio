@@ -169,6 +169,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. THEME TOGGLE (Light / Dark Mode)
   // ==========================================
   const themeToggleBtn = document.getElementById('theme-toggle');
+  const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+  
+  // Sync toggle handle visual state
+  const syncToggleHandles = () => {
+    const isLight = document.documentElement.classList.contains('light-mode');
+    // The CSS already handles handle position via light-mode class,
+    // but keep mobile toggle in visual sync by doing nothing extra —
+    // both toggles share the same CSS class and the html.light-mode rules do the work.
+  };
   
   // Check for saved theme preference or default to dark
   const savedTheme = localStorage.getItem('theme');
@@ -177,19 +186,26 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.classList.add('light-mode');
   }
   
+  const applyThemeToggle = () => {
+    // Add temporary class for smooth transitions
+    document.body.classList.add('theme-transition');
+    
+    const isLight = document.documentElement.classList.toggle('light-mode');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    
+    // Clean up transition class
+    setTimeout(() => {
+      document.body.classList.remove('theme-transition');
+    }, 350);
+  };
+  
   if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      // Add temporary class for smooth transitions
-      document.body.classList.add('theme-transition');
-      
-      const isLight = document.documentElement.classList.toggle('light-mode');
-      localStorage.setItem('theme', isLight ? 'light' : 'dark');
-      
-      // Clean up transition class
-      setTimeout(() => {
-        document.body.classList.remove('theme-transition');
-      }, 350);
-    });
+    themeToggleBtn.addEventListener('click', applyThemeToggle);
+  }
+  
+  // Mobile theme toggle (inside overlay) stays in sync
+  if (themeToggleMobile) {
+    themeToggleMobile.addEventListener('click', applyThemeToggle);
   }
 
   // ==========================================
@@ -429,11 +445,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Attach click handlers to project cards
   projectCards.forEach(card => {
-    card.addEventListener('click', (e) => {
-      e.preventDefault();
-      const titleEl = card.querySelector('.project-title');
-      if (titleEl) {
-        openCaseStudy(titleEl.textContent.trim());
+    const openCard = () => {
+      // Prefer data-project attribute; fall back to .project-title text
+      const projectName = card.dataset.project ||
+        (card.querySelector('.project-title') ? card.querySelector('.project-title').textContent.trim() : '');
+      if (projectName) {
+        openCaseStudy(projectName);
+      }
+    };
+    
+    card.addEventListener('click', openCard);
+    
+    // Keyboard accessibility for div[role="button"]
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openCard();
       }
     });
   });

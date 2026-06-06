@@ -332,6 +332,27 @@ img {
   border-radius: 30px;
 }
 
+/* Mobile theme row inside overlay */
+.mobile-theme-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+  width: 80%;
+}
+
+.mobile-theme-label {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 /* LAYOUT CONTAINER */
 .main-layout {
   position: relative;
@@ -1270,8 +1291,14 @@ html.light-mode .social-icon-btn:hover {
     display: none; /* Hide default inline links */
   }
   
+  /* Hide "Let's Talk" CTA on mobile, keep theme toggle */
+  .nav-cta-talk {
+    display: none !important;
+  }
+  
   .mobile-toggle {
     display: flex; /* Show hamburger toggle */
+    z-index: 1200; /* Above the overlay */
   }
   
   .hero-card {

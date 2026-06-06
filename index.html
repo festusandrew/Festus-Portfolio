@@ -51,7 +51,7 @@
       </nav>
 
       <div class="nav-ctas">
-        <a href="#contact" class="btn btn-primary">Let's Talk</a>
+        <a href="#contact" class="btn btn-primary nav-cta-talk">Let's Talk</a>
         <button id="theme-toggle" class="theme-switch" aria-label="Toggle Theme">
           <div class="switch-handle"></div>
           <span class="switch-icon sun-icon-wrapper">
@@ -90,6 +90,26 @@
       <a href="#tools" class="mobile-nav-link">Tools</a>
       <a href="#thoughts" class="mobile-nav-link">Thoughts</a>
       <a href="#contact" class="mobile-nav-link">Let's Talk</a>
+      <!-- Theme toggle inside mobile menu -->
+      <div class="mobile-theme-row">
+        <span class="mobile-theme-label">Switch Theme</span>
+        <button id="theme-toggle-mobile" class="theme-switch" aria-label="Toggle Theme Mobile">
+          <div class="switch-handle"></div>
+          <span class="switch-icon sun-icon-wrapper">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+          </span>
+          <span class="switch-icon moon-icon-wrapper">
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </span>
+        </button>
+      </div>
     </nav>
   </div>
 
@@ -220,7 +240,7 @@
 
       <div class="projects-grid">
         <!-- Project Card 1: Eiieni -->
-        <a href="https://github.com/festusandrew/Eiieni" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card" role="button" tabindex="0" data-project="Eiieni">
           <div class="project-image-box">
             <img src="images/eiieni.png" alt="Eiieni — Visual Accessibility Product"
               class="project-img">
@@ -239,10 +259,10 @@
               </svg>
             </div>
           </div>
-        </a>
+        </div>
 
         <!-- Project Card 2: HR Advisory -->
-        <a href="https://github.com/festusandrew/HR-Advisory" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card" role="button" tabindex="0" data-project="HR Advisory">
           <div class="project-image-box">
             <img src="images/hr-advisory.png" alt="HR Advisory — Ticket Management Platform"
               class="project-img">
@@ -261,10 +281,10 @@
               </svg>
             </div>
           </div>
-        </a>
+        </div>
 
         <!-- Project Card 3: Care Management -->
-        <a href="https://github.com/festusandrew/Care-Management" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card" role="button" tabindex="0" data-project="Care Management">
           <div class="project-image-box">
             <img src="images/care-management.png" alt="Care Management — Healthcare Platform"
               class="project-img">
@@ -283,10 +303,10 @@
               </svg>
             </div>
           </div>
-        </a>
+        </div>
 
         <!-- Project Card 4: Locum -->
-        <a href="https://github.com/festusandrew/Locum" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card" role="button" tabindex="0" data-project="Locum">
           <div class="project-image-box">
             <img src="images/locum.png" alt="Locum — Healthcare Shift Booking"
               class="project-img">
@@ -305,10 +325,10 @@
               </svg>
             </div>
           </div>
-        </a>
+        </div>
 
         <!-- Project Card 5: Endyy -->
-        <a href="https://github.com/festusandrew/Endyy" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card" role="button" tabindex="0" data-project="Endyy">
           <div class="project-image-box">
             <img src="images/endyy.png" alt="Endyy — Cakes and Bakes E-commerce"
               class="project-img">
@@ -327,10 +347,10 @@
               </svg>
             </div>
           </div>
-        </a>
+        </div>
 
         <!-- Project Card 6: Aika Test Bot -->
-        <a href="https://github.com/festusandrew/aika-test-bot" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card" role="button" tabindex="0" data-project="Aika Bot">
           <div class="project-image-box">
             <img src="images/aika-bot.png" alt="Aika — AI Test Bot"
               class="project-img">
@@ -349,7 +369,7 @@
               </svg>
             </div>
           </div>
-        </a>
+        </div>
       </div>
 
       <!-- Pagination Controls -->
