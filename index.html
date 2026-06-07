@@ -73,7 +73,7 @@
       </div>
 
       <!-- Mobile Menu Toggle -->
-      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Menu" aria-expanded="false" aria-controls="mobile-menu-overlay">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -82,8 +82,16 @@
   </header>
 
   <!-- MOBILE OVERLAY NAVIGATION -->
-  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-    <nav class="mobile-nav-links">
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation" aria-hidden="true">
+    <!-- Close Button -->
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <nav class="mobile-nav-links" aria-label="Mobile navigation links">
       <a href="#home" class="mobile-nav-link">Home</a>
       <a href="#projects" class="mobile-nav-link">Projects</a>
       <a href="#experience" class="mobile-nav-link">Experience</a>

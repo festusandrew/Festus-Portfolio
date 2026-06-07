@@ -79,24 +79,77 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   const mobileToggle = document.getElementById('mobile-toggle');
   const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+  const mobileCloseBtn = document.getElementById('mobile-menu-close');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-  
-  const toggleMobileMenu = () => {
-    mobileToggle.classList.toggle('open');
-    mobileMenuOverlay.classList.toggle('open');
-    document.body.classList.toggle('no-scroll'); // Optional: prevent scrolling when menu is open
+
+  const openMobileMenu = () => {
+    mobileToggle.classList.add('open');
+    mobileMenuOverlay.classList.add('open');
+    mobileToggle.setAttribute('aria-expanded', 'true');
+    mobileToggle.setAttribute('aria-label', 'Close Menu');
+    mobileMenuOverlay.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('no-scroll');
+    // Move focus into menu for accessibility
+    if (mobileCloseBtn) mobileCloseBtn.focus();
   };
-  
+
+  const closeMobileMenu = () => {
+    mobileToggle.classList.remove('open');
+    mobileMenuOverlay.classList.remove('open');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    mobileToggle.setAttribute('aria-label', 'Open Menu');
+    mobileMenuOverlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('no-scroll');
+    mobileToggle.focus();
+  };
+
+  const syncActiveMobileLink = () => {
+    const currentHash = window.location.hash || '#home';
+    mobileLinks.forEach(link => {
+      if (link.getAttribute('href') === currentHash) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  };
+
   if (mobileToggle && mobileMenuOverlay) {
-    mobileToggle.addEventListener('click', toggleMobileMenu);
-    
-    // Close mobile menu when clicking any overlay link
+    mobileToggle.addEventListener('click', () => {
+      if (mobileMenuOverlay.classList.contains('open')) {
+        closeMobileMenu();
+      } else {
+        syncActiveMobileLink();
+        openMobileMenu();
+      }
+    });
+
+    // Dedicated close button inside overlay
+    if (mobileCloseBtn) {
+      mobileCloseBtn.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close when clicking any mobile nav link
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
         if (mobileMenuOverlay.classList.contains('open')) {
-          toggleMobileMenu();
+          closeMobileMenu();
         }
       });
+    });
+
+    // Close when clicking the dark overlay backdrop
+    mobileMenuOverlay.addEventListener('click', (e) => {
+      if (e.target === mobileMenuOverlay) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('open')) {
+        closeMobileMenu();
+      }
     });
   }
 
