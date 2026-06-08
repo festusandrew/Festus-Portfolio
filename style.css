@@ -670,13 +670,13 @@ html.light-mode .social-icon-btn:hover {
   font-family: var(--font-title);
   font-size: 1.5rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.75);
   letter-spacing: 2px;
   transition: color 0.3s;
 }
 
 .marquee:hover .marquee-track span {
-  color: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
 }
 
 @keyframes scroll-left {
@@ -1106,6 +1106,7 @@ html.light-mode .social-icon-btn:hover {
   align-self: flex-start;
   padding-bottom: 4px;
   transition: var(--transition-fast);
+  text-decoration: none;
 }
 
 .contact-email:hover {
@@ -1211,11 +1212,14 @@ html.light-mode .social-icon-btn:hover {
   pointer-events: none;
   transition: opacity 0.4s ease;
   z-index: 2;
+  padding: 24px;
 }
 
 .form-success-alert.show {
   opacity: 1;
   pointer-events: auto;
+  position: relative;
+  min-height: 350px;
 }
 
 .alert-icon {
@@ -1470,6 +1474,12 @@ html.light-mode .social-icon-btn:hover {
   
   .contact-title {
     font-size: 2.2rem;
+  }
+
+  .contact-email {
+    font-size: clamp(1.1rem, 5.5vw, 1.4rem);
+    word-break: break-all;
+    max-width: 100%;
   }
   
   .form-row {
@@ -1731,10 +1741,10 @@ html.light-mode .marquee-section {
   border-color: var(--border-color);
 }
 html.light-mode .marquee-track span {
-  color: rgba(21, 19, 18, 0.22);
+  color: rgba(21, 19, 18, 0.75);
 }
 html.light-mode .marquee:hover .marquee-track span {
-  color: rgba(21, 19, 18, 0.45);
+  color: rgb(21, 19, 18);
 }
 
 /* Form inputs styling */

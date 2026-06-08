@@ -224,14 +224,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggleBtn = document.getElementById('theme-toggle');
   const themeToggleMobile = document.getElementById('theme-toggle-mobile');
   
-  // Sync toggle handle visual state
-  const syncToggleHandles = () => {
-    const isLight = document.documentElement.classList.contains('light-mode');
-    // The CSS already handles handle position via light-mode class,
-    // but keep mobile toggle in visual sync by doing nothing extra —
-    // both toggles share the same CSS class and the html.light-mode rules do the work.
-  };
-  
   // Check for saved theme preference or default to dark
   const savedTheme = localStorage.getItem('theme');
   
