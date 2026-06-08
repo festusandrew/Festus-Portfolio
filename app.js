@@ -206,15 +206,44 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.textContent = 'Sending...';
       submitBtn.disabled = true;
       
-      // Simulate AJAX request
-      setTimeout(() => {
+      const formData = {
+        name: document.getElementById('form-name').value,
+        email: document.getElementById('form-email').value,
+        budget: document.getElementById('form-budget').value,
+        message: document.getElementById('form-message').value
+      };
+      
+      // Post to FormSubmit AJAX endpoint
+      fetch('https://formsubmit.co/ajax/festusandrew23@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
         // Fade out form and display success card
         contactForm.style.opacity = '0';
         setTimeout(() => {
           contactForm.style.display = 'none';
           successAlert.classList.add('show');
         }, 300);
-      }, 1500);
+      })
+      .catch(error => {
+        // Fallback or alert on error
+        submitBtn.textContent = 'Error! Try Again';
+        submitBtn.disabled = false;
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+        }, 3000);
+      });
     });
   }
 
