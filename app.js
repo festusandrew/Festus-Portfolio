@@ -384,7 +384,7 @@ document.addEventListener('DOMContentLoaded', () => {
       solution: 'Developed a full-stack TypeScript application with a kanban-style task board where clients submit tickets and HR professionals manage them through configurable workflow stages. Features include real-time status updates, priority tagging, SLA tracking, and automated email notifications.',
       process: 'I began by interviewing HR professionals to understand their existing workflow bottlenecks. I mapped the ticket lifecycle (New → In Progress → Resolved → Closed) and designed the database schema around it. The frontend was built with a focus on information density — showing the right data at the right time without overwhelming the user.',
       processImages: ['images/hr-advisory.png', 'images/hr-advisory-process.png'],
-      outcome: 'Successfully deployed to production on Vercel. The platform reduced average ticket resolution time by streamlining communication between clients and HR teams. Currently live at hr-advisory.vercel.app.',
+      outcome: 'Successfully deployed to production. The platform reduced average ticket resolution time by streamlining communication between clients and HR teams.',
       githubUrl: 'https://github.com/festusandrew/HR-Advisory'
     },
     'Care Management': {
