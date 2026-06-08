@@ -901,6 +901,40 @@ html.light-mode .social-icon-btn:hover {
   max-width: 800px;
 }
 
+.exp-location {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.exp-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exp-bullet-list li {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 20px;
+}
+
+.exp-bullet-list li::before {
+  content: "•";
+  color: var(--accent-lime);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
 /* TOOLS SECTION */
 .tools-grid {
   display: grid;
