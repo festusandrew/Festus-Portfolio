@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const formData = {
         name: document.getElementById('form-name').value,
         email: document.getElementById('form-email').value,
-        budget: document.getElementById('form-budget').value,
+        subject: document.getElementById('form-subject').value,
         message: document.getElementById('form-message').value
       };
       
