@@ -401,7 +401,8 @@ document.addEventListener('DOMContentLoaded', () => {
       process: 'I started by conducting accessibility audits of existing tools to identify pain points. Then I mapped out user flows for different impairment levels, created low-fidelity wireframes focused on simplicity, and iterated through 3 major design revisions based on user testing feedback. The color palette was chosen for maximum contrast ratios exceeding WCAG AAA standards.',
       processImages: ['images/eiieni.png', 'images/eiieni-process.png'],
       outcome: 'Delivered a fully functional MVP that processes images in under 2 seconds with 94% description accuracy. The application has received positive feedback from beta testers in the accessibility community and is actively being developed with planned mobile support.',
-      githubUrl: 'https://github.com/festusandrew/Eiieni'
+      projectUrl: 'https://github.com/festusandrew/Eiieni',
+      btnText: 'View on GitHub'
     },
     'HR Advisory': {
       title: 'HR Advisory',
@@ -414,33 +415,36 @@ document.addEventListener('DOMContentLoaded', () => {
       process: 'I began by interviewing HR professionals to understand their existing workflow bottlenecks. I mapped the ticket lifecycle (New → In Progress → Resolved → Closed) and designed the database schema around it. The frontend was built with a focus on information density — showing the right data at the right time without overwhelming the user.',
       processImages: ['images/hr-advisory.png', 'images/hr-advisory-process.png'],
       outcome: 'Successfully deployed to production. The platform reduced average ticket resolution time by streamlining communication between clients and HR teams.',
-      githubUrl: 'https://github.com/festusandrew/HR-Advisory'
+      projectUrl: 'https://github.com/festusandrew/HR-Advisory',
+      btnText: 'View on GitHub'
     },
     'Care Management': {
       title: 'Care Management',
       badge: 'TypeScript',
       date: 'May 2026',
-      heroImg: 'images/care-management.png',
+      heroImg: 'images/care-management-mockup.png',
       problem: 'Healthcare facilities needed a modern, digital-first approach to managing patient records, scheduling appointments, and tracking health metrics. Legacy paper-based systems were error-prone and made it difficult to share information across care teams.',
       role: 'Frontend Developer & System Architect — Led the frontend development, designed the component architecture, and built the patient dashboard with real-time health metrics visualization.',
       solution: 'Built a comprehensive care management platform using TypeScript with a modular component architecture. The system features patient record management, appointment scheduling, health metrics dashboards with visual charts, and role-based access controls for different care team members.',
       process: 'I researched healthcare UX best practices and HIPAA compliance requirements. The design process focused on reducing cognitive load for busy healthcare workers — using color-coded status indicators, progressive disclosure patterns, and a sidebar navigation that adapts based on user role. Each component was designed to be reusable across different care facility configurations.',
-      processImages: ['images/care-management.png'],
+      processImages: ['images/care-management-mockup.png', 'images/care-management.png', 'images/care-management-process.png'],
       outcome: 'Delivered a functional healthcare management interface that centralizes patient data and improves care team coordination. The modular architecture allows easy customization for different facility types and regulatory requirements.',
-      githubUrl: 'https://github.com/festusandrew/Care-Management'
+      projectUrl: 'https://care-management-eight.vercel.app/',
+      btnText: 'Launch Live Application'
     },
     'Locum': {
       title: 'Locum',
       badge: 'TypeScript',
       date: 'May 2026',
-      heroImg: 'images/locum.png',
+      heroImg: 'images/locum-mockup.png',
       problem: 'Healthcare professionals looking for temporary shift work (locum positions) had no efficient platform to discover, filter, and apply for available shifts. Facilities also struggled to fill last-minute openings quickly.',
       role: 'Full-Stack Developer — Built the shift listing system, application workflow, calendar integration, and the matching algorithm that connects professionals with relevant openings based on speciality and location.',
       solution: 'Created a shift marketplace platform where healthcare facilities post available shifts and professionals can browse, filter by speciality/location/time, and apply with a single click. The system includes a calendar view for scheduling, automated conflict detection, and application status tracking.',
       process: 'I started by analyzing job marketplace UX patterns from platforms like Indeed and LinkedIn, then adapted them for the healthcare context where speed of matching is critical. The UI was designed for mobile-first usage since many locum workers browse shifts on their phones between assignments. Filter controls were prioritized above the fold for quick discovery.',
-      processImages: ['images/locum.png'],
+      processImages: ['images/locum-mockup.png', 'images/locum.png', 'images/locum-process.png'],
       outcome: 'Built a complete shift booking MVP that streamlines the connection between healthcare facilities and temporary professionals. The platform reduces the time-to-fill for urgent shifts and gives professionals a centralized hub for managing their locum work.',
-      githubUrl: 'https://github.com/festusandrew/Locum'
+      projectUrl: 'https://locum-beige.vercel.app/',
+      btnText: 'Launch Live Application'
     },
     'Endyy': {
       title: 'Endyy',
@@ -453,7 +457,8 @@ document.addEventListener('DOMContentLoaded', () => {
       process: 'I worked closely with the business owner to understand their product categories, pricing structure, and most common customization requests. The design process started with mood boards inspired by premium bakery brands, then moved into high-fidelity mockups that emphasized food photography. The order form was designed to progressively collect details (size → flavor → design → delivery) to avoid overwhelming customers.',
       processImages: ['images/endyy.png'],
       outcome: 'Launched a beautiful, functional bakery e-commerce platform that elevated the business\'s online presence. The custom order form significantly reduced back-and-forth communication about order specifications and helped streamline the fulfillment process.',
-      githubUrl: 'https://github.com/festusandrew/Endyy'
+      projectUrl: 'https://github.com/festusandrew/Endyy',
+      btnText: 'View on GitHub'
     },
     'Aika Bot': {
       title: 'Aika Bot',
@@ -466,7 +471,8 @@ document.addEventListener('DOMContentLoaded', () => {
       process: 'I analyzed common patterns in conversational AI failures — misunderstood intents, incorrect entity extraction, and context loss. The bot was designed around a scenario-based testing framework where each test case defines an input, expected response pattern, and acceptance criteria. The architecture was kept lightweight using vanilla JavaScript to minimize dependencies.',
       processImages: ['images/aika-bot.png'],
       outcome: 'Delivered a functional test automation bot that can run predefined conversation scenarios and report pass/fail results. The tool reduced manual testing effort and improved the consistency of conversational AI quality assurance.',
-      githubUrl: 'https://github.com/festusandrew/aika-test-bot'
+      projectUrl: 'https://github.com/festusandrew/aika-test-bot',
+      btnText: 'View on GitHub'
     }
   };
 
@@ -489,7 +495,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('cs-solution').textContent = data.solution;
     document.getElementById('cs-process').textContent = data.process;
     document.getElementById('cs-outcome').textContent = data.outcome;
-    document.getElementById('cs-github-link').href = data.githubUrl;
+    
+    // Dynamically set up CTA action link
+    const actionBtn = document.getElementById('cs-action-link');
+    actionBtn.href = data.projectUrl;
+    const isGitHub = data.projectUrl.includes('github.com');
+    const iconSvg = isGitHub 
+      ? `<svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+         </svg>`
+      : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+         </svg>`;
+    actionBtn.innerHTML = `${iconSvg} <span>${data.btnText}</span>`;
 
     // Populate process images
     const gallery = document.getElementById('cs-process-images');

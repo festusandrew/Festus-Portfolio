@@ -85,7 +85,7 @@ img {
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 9999;
+  z-index: 100001;
   transition: width 0.2s, height 0.2s, background-color 0.2s;
   opacity: 0;
 }
@@ -98,7 +98,7 @@ img {
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 9998;
+  z-index: 100000;
   transition: transform 0.1s ease-out, width 0.2s, height 0.2s, border-color 0.2s;
   opacity: 0;
 }
@@ -2111,7 +2111,7 @@ html.light-mode .page-num-btn.active {
   box-shadow: 0 8px 24px rgba(197, 255, 65, 0.08);
 }
 
-/* GitHub CTA */
+/* Dynamic Action CTA */
 .cs-cta {
   display: flex;
   justify-content: center;
@@ -2119,7 +2119,7 @@ html.light-mode .page-num-btn.active {
   padding-bottom: 8px;
 }
 
-.cs-github-btn {
+.cs-action-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -2135,7 +2135,7 @@ html.light-mode .page-num-btn.active {
   transition: var(--transition-smooth);
 }
 
-.cs-github-btn:hover {
+.cs-action-btn:hover {
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 8px 24px rgba(197, 255, 65, 0.25);
 }
@@ -2160,7 +2160,7 @@ html.light-mode .case-study-close:hover {
   background: rgba(0, 0, 0, 0.06);
 }
 
-html.light-mode .cs-github-btn {
+html.light-mode .cs-action-btn {
   background: var(--accent-lime);
   color: #ffffff;
 }
