@@ -473,6 +473,20 @@ document.addEventListener('DOMContentLoaded', () => {
       outcome: 'Delivered a functional test automation bot that can run predefined conversation scenarios and report pass/fail results. The tool reduced manual testing effort and improved the consistency of conversational AI quality assurance.',
       projectUrl: 'https://github.com/festusandrew/aika-test-bot',
       btnText: 'View on GitHub'
+    },
+    'Pay4Me App': {
+      title: 'Pay4Me App',
+      badge: 'Figma',
+      date: 'July 2026',
+      heroImg: 'images/pay4me-mockup.png',
+      problem: 'International students struggle with slow, expensive, and complex procedures when trying to pay their tuition and school fees across borders. Traditional bank transfers are slow, expensive, and offer little visibility into when payments will settle.',
+      role: 'Lead UI/UX Designer — Responsible for the user experience strategy, creating pixel-perfect components, and structuring the 3-step payment onboarding experience.',
+      solution: 'Designed and built a clean, intuitive web application layout that simplifies international tuition payments into three simple steps: download the app, create a secure account, and complete payments fast with automated currency conversions and integration with top payment providers.',
+      process: 'We mapped out user journeys for students paying international fees, keeping transaction transparency upfront. The interface was styled with a fresh, modern green color scheme and a simple layout to build trust and eliminate friction. Responsive testing ensured seamless form inputs on both desktop and mobile viewports.',
+      processImages: ['images/pay4me-mockup.png'],
+      outcome: 'Successfully launched a high-converting web presence and onboarding flow. The optimized 3-step design successfully reduced average payment processing steps, helping students pay their tuition within minutes rather than days.',
+      projectUrl: 'https://www.figma.com/proto/Wpm73HjQ0kdWdlCWB8qrMK/pay4me.app?node-id=65-435&t=EtYMFMbH98YBnXIC-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1',
+      btnText: 'View Figma Prototype'
     }
   };
 
@@ -500,15 +514,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const actionBtn = document.getElementById('cs-action-link');
     actionBtn.href = data.projectUrl;
     const isGitHub = data.projectUrl.includes('github.com');
+    const isFigma = data.projectUrl.includes('figma.com');
     const iconSvg = isGitHub 
       ? `<svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
           <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
          </svg>`
-      : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-          <polyline points="15 3 21 3 21 9"></polyline>
-          <line x1="10" y1="14" x2="21" y2="3"></line>
-         </svg>`;
+      : isFigma
+        ? `<svg viewBox="0 0 384 512" fill="currentColor" width="18" height="18" style="vertical-align: middle; margin-right: 4px;">
+            <path d="M128 0C75 0 32 43 32 96c0 40.5 25.2 75.1 60.7 89.3C60.4 197.8 32 231.5 32 272c0 40.5 25.2 75.1 60.7 89.3C60.4 373.8 32 407.5 32 448c0 53 43 96 96 96c53 0 96-43 96-96l0-176 64 0c53 0 96-43 96-96c0-40.5-25.2-75.1-60.7-89.3C323.6 138.2 352 104.5 352 64c0-53-43-96-96-96L128 0zM128 96c0-17.7 14.3-32 32-32l32 0 0 64-32 0c-17.7 0-32-14.3-32-32zm0 176c0-17.7 14.3-32 32-32l32 0 0 64-32 0c-17.7 0-32-14.3-32-32zM224 448c0 17.7-14.3 32-32 32c-17.7 0-32-14.3-32-32c0-17.7 14.3-32 32-32l32 0 0 32zm0-240l0 64-32 0c-17.7 0-32-14.3-32-32c0-17.7 14.3-32 32-32l32 0zM256 64c17.7 0 32 14.3 32 32c0 17.7-14.3 32-32 32l-32 0 0-64 32 0z"/>
+           </svg>`
+        : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+           </svg>`;
     actionBtn.innerHTML = `${iconSvg} <span>${data.btnText}</span>`;
 
     // Populate process images
