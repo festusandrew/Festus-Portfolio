@@ -478,12 +478,15 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Pay4Me App',
       badge: 'Figma',
       date: 'July 2026',
-      heroImg: 'images/pay4me-mockup.png',
+      heroImg: 'https://res.cloudinary.com/dqfmlehav/image/upload/v1783629848/Landing_page_askxi7.png',
       problem: 'International students struggle with slow, expensive, and complex procedures when trying to pay their tuition and school fees across borders. Traditional bank transfers are slow, expensive, and offer little visibility into when payments will settle.',
       role: 'Lead UI/UX Designer — Responsible for the user experience strategy, creating pixel-perfect components, and structuring the 3-step payment onboarding experience.',
       solution: 'Designed and built a clean, intuitive web application layout that simplifies international tuition payments into three simple steps: download the app, create a secure account, and complete payments fast with automated currency conversions and integration with top payment providers.',
       process: 'We mapped out user journeys for students paying international fees, keeping transaction transparency upfront. The interface was styled with a fresh, modern green color scheme and a simple layout to build trust and eliminate friction. Responsive testing ensured seamless form inputs on both desktop and mobile viewports.',
-      processImages: ['images/pay4me-mockup.png'],
+      processImages: [
+        { src: 'https://res.cloudinary.com/dqfmlehav/image/upload/v1783629848/Landing_page_askxi7.png', style: 'object-position: top;' },
+        { src: 'https://res.cloudinary.com/dqfmlehav/image/upload/v1783629848/Landing_page_askxi7.png', style: 'object-position: bottom;' }
+      ],
       outcome: 'Successfully launched a high-converting web presence and onboarding flow. The optimized 3-step design successfully reduced average payment processing steps, helping students pay their tuition within minutes rather than days.',
       projectUrl: 'https://www.figma.com/proto/Wpm73HjQ0kdWdlCWB8qrMK/pay4me.app?node-id=65-435&t=EtYMFMbH98YBnXIC-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1',
       btnText: 'View Figma Prototype'
@@ -499,8 +502,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!data) return;
 
     // Populate modal
-    document.getElementById('cs-hero-img').src = data.heroImg;
-    document.getElementById('cs-hero-img').alt = data.title;
+    const heroImgEl = document.getElementById('cs-hero-img');
+    heroImgEl.src = data.heroImg;
+    heroImgEl.alt = data.title;
+    if (projectName === 'Pay4Me App') {
+      heroImgEl.style.objectPosition = 'top';
+    } else {
+      heroImgEl.style.objectPosition = '';
+    }
     document.getElementById('cs-badge').textContent = data.badge;
     document.getElementById('cs-title').textContent = data.title;
     document.getElementById('cs-date').textContent = data.date;
@@ -534,11 +543,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const gallery = document.getElementById('cs-process-images');
     gallery.innerHTML = '';
     if (data.processImages && data.processImages.length > 0) {
-      data.processImages.forEach(src => {
+      data.processImages.forEach(item => {
         const img = document.createElement('img');
+        const src = typeof item === 'object' ? item.src : item;
+        const styleText = typeof item === 'object' ? item.style : '';
+        
         img.src = src;
         img.alt = data.title + ' design process';
         img.loading = 'lazy';
+        if (styleText) {
+          img.style.cssText = styleText;
+        }
         gallery.appendChild(img);
       });
     }
