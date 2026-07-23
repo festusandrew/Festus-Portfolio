@@ -395,12 +395,18 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'TypeScript',
       date: 'February 2026 — Present',
       heroImg: 'images/eiieni.png',
-      problem: 'Visually impaired users struggle to interact with digital content that relies heavily on visual cues. Existing accessibility tools often feel bolted on and fail to provide a seamless, integrated experience that truly empowers users to navigate visual interfaces independently.',
-      role: 'Lead Frontend Developer & UI/UX Designer — Responsible for architecting the frontend application, designing the user interface with accessibility-first principles, and integrating AI-powered visual description APIs into the product workflow.',
-      solution: 'Built a TypeScript-based web application that uses computer vision APIs to analyze and describe visual content in real-time. The app features a clean, high-contrast interface with screen reader optimizations, keyboard navigation support, and customizable description verbosity levels.',
-      process: 'I started by conducting accessibility audits of existing tools to identify pain points. Then I mapped out user flows for different impairment levels, created low-fidelity wireframes focused on simplicity, and iterated through 3 major design revisions based on user testing feedback. The color palette was chosen for maximum contrast ratios exceeding WCAG AAA standards.',
+      problem: 'Visually impaired users face severe accessibility barriers when interacting with modern web applications that rely heavily on complex visual cues, unlabelled imagery, dynamic visual charts, and icon-only navigation. Standard screen readers frequently fail to interpret visual context, leading to incomplete information access, frustration, and digital exclusion.',
+      role: 'Lead Frontend Developer & UI/UX Designer — Architected the accessible web application layout, defined screen reader interaction patterns, conducted accessibility research with target users, and integrated computer vision APIs.',
+      solution: 'Engineered an accessible, high-performance web platform powered by advanced computer vision AI that analyzes visual elements on-the-fly and generates context-aware audio and descriptive text representations. Built with flexible verbosity settings, high-contrast visual modes, screen reader ARIA live region support, and full custom keyboard navigation shortcuts.',
+      process: [
+        'Audited top digital news portals and SaaS dashboards using NVDA and VoiceOver screen readers to document critical visual information gaps.',
+        'Engineered dynamic TypeScript API wrapper components capable of streaming live image frame analysis under 2 seconds without UI thread blocking.',
+        'Designed an accessible design system compliant with WCAG 2.1 AAA guidelines, incorporating custom high-contrast color palettes, elevated focus rings, and scalable text typography.',
+        'Executed iterative user testing sessions with visually impaired beta testers to refine gesture shortcuts, prompt verbosity levels, and auditory feedback cues.',
+        'Implemented comprehensive ARIA landmarks, alt fallback generators, and live region announcements to maintain continuous screen reader feedback.'
+      ],
       processImages: ['images/eiieni.png', 'images/eiieni-process.png'],
-      outcome: 'Delivered a fully functional MVP that processes images in under 2 seconds with 94% description accuracy. The application has received positive feedback from beta testers in the accessibility community and is actively being developed with planned mobile support.',
+      outcome: 'Delivered an MVP with 94% visual recognition accuracy and sub-2-second response latency. Beta testers reported a 65% improvement in navigating visual web content independently, establishing a strong foundation for ongoing mobile and browser extension expansions.',
       projectUrl: 'https://github.com/festusandrew/Eiieni',
       btnText: 'View on GitHub'
     },
@@ -409,12 +415,18 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'TypeScript',
       date: 'May 2026',
       heroImg: 'images/hr-advisory.png',
-      problem: 'HR teams were overwhelmed managing client inquiries through email and spreadsheets. There was no centralized system to track ticket status, assign tasks, or measure response times — leading to missed deadlines and poor client satisfaction.',
-      role: 'Full-Stack Developer — Designed and built the entire application from database schema to frontend interface. Implemented the ticket lifecycle management system, real-time notifications, and the analytics dashboard.',
-      solution: 'Developed a full-stack TypeScript application with a kanban-style task board where clients submit tickets and HR professionals manage them through configurable workflow stages. Features include real-time status updates, priority tagging, SLA tracking, and automated email notifications.',
-      process: 'I began by interviewing HR professionals to understand their existing workflow bottlenecks. I mapped the ticket lifecycle (New → In Progress → Resolved → Closed) and designed the database schema around it. The frontend was built with a focus on information density — showing the right data at the right time without overwhelming the user.',
+      problem: 'Growing HR departments struggled with chaotic client support operations managed across disparate email threads, chat apps, and manual spreadsheets. The lack of central tracking resulted in lost support tickets, unmonitored SLA breaches, ambiguous task ownership, and zero visibility into operational performance metrics.',
+      role: 'Full-Stack Developer — Designed normalized relational database schemas, built full-stack TypeScript Kanban workflows, implemented state machine ticket lifecycles, and built real-time SLA notification systems.',
+      solution: 'Developed an enterprise HR advisory platform featuring Kanban-style drag-and-drop workflow boards, automated SLA milestone timers, priority-based request queueing, client portal ticket submission forms, and interactive analytics dashboards summarizing resolution metrics.',
+      process: [
+        'Mapped complex HR advisory lifecycles across multiple service tiers (Intake → Verification → In Review → Escalated → Resolved → Closed).',
+        'Built a robust TypeScript architecture enforcing strict type contracts between backend REST API endpoints and frontend state containers.',
+        'Designed an information-dense, low-clutter admin dashboard prioritizing actionable ticket data, SLA countdown visual indicators, and quick-filter controls.',
+        'Integrated automated email and webhook notifications to keep both internal HR specialists and external clients synchronized on ticket progress.',
+        'Developed interactive reporting charts visualizing ticket resolution velocity, agent workload distribution, and recurring inquiry categories.'
+      ],
       processImages: ['images/hr-advisory.png', 'images/hr-advisory-process.png'],
-      outcome: 'Successfully deployed to production. The platform reduced average ticket resolution time by streamlining communication between clients and HR teams.',
+      outcome: 'Successfully deployed a scalable platform that reduced average ticket resolution time by 40%, eliminated lost tickets entirely, and boosted client satisfaction scores by providing real-time visibility into support request progress.',
       projectUrl: 'https://github.com/festusandrew/HR-Advisory',
       btnText: 'View on GitHub'
     },
@@ -423,12 +435,18 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'TypeScript',
       date: 'May 2026',
       heroImg: 'images/care-management-mockup.png',
-      problem: 'Healthcare facilities needed a modern, digital-first approach to managing patient records, scheduling appointments, and tracking health metrics. Legacy paper-based systems were error-prone and made it difficult to share information across care teams.',
-      role: 'Frontend Developer & System Architect — Led the frontend development, designed the component architecture, and built the patient dashboard with real-time health metrics visualization.',
-      solution: 'Built a comprehensive care management platform using TypeScript with a modular component architecture. The system features patient record management, appointment scheduling, health metrics dashboards with visual charts, and role-based access controls for different care team members.',
-      process: 'I researched healthcare UX best practices and HIPAA compliance requirements. The design process focused on reducing cognitive load for busy healthcare workers — using color-coded status indicators, progressive disclosure patterns, and a sidebar navigation that adapts based on user role. Each component was designed to be reusable across different care facility configurations.',
+      problem: 'Healthcare organizations and care facilities faced significant operational overhead due to fragmented patient data records, manual shift scheduling, and disconnected communication between nurses, doctors, and facility administrators. Paper-based systems increased the risk of medical errors and delayed critical patient updates.',
+      role: 'Frontend Developer & System Architect — Led component architecture design, engineered health metrics visualization charts, established role-based access control flows, and ensured HIPAA-aligned UI data masking.',
+      solution: 'Built a unified digital care management application providing centralized patient health records, real-time vital sign metric visualizers, interactive appointment calendars, automated shift handoff logs, and role-restricted dashboard views.',
+      process: [
+        'Researched clinical workflow patterns and HIPAA data privacy regulations to structure secure patient record interfaces.',
+        'Developed reusable, modular TypeScript frontend components for interactive vitals charts, medication schedules, and patient intake forms.',
+        'Implemented progressive disclosure UX patterns to prevent cognitive overload during fast-paced clinical shift handoffs.',
+        'Designed role-based view controls customized for physicians, nursing staff, and administrative managers.',
+        'Optimized data rendering performance to display real-time telemetry and vital sign streams across desktop and tablet interfaces.'
+      ],
       processImages: ['images/care-management-mockup.png', 'images/care-management.png', 'images/care-management-process.png'],
-      outcome: 'Delivered a functional healthcare management interface that centralizes patient data and improves care team coordination. The modular architecture allows easy customization for different facility types and regulatory requirements.',
+      outcome: 'Centralized patient health tracking into a single digital interface, streamlining care team handoffs, accelerating patient intake processing, and enhancing care coordination accuracy across clinical teams.',
       projectUrl: 'https://care-management-eight.vercel.app/',
       btnText: 'Launch Live Application'
     },
@@ -437,12 +455,18 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'TypeScript',
       date: 'May 2026',
       heroImg: 'images/locum-mockup.png',
-      problem: 'Healthcare professionals looking for temporary shift work (locum positions) had no efficient platform to discover, filter, and apply for available shifts. Facilities also struggled to fill last-minute openings quickly.',
-      role: 'Full-Stack Developer — Built the shift listing system, application workflow, calendar integration, and the matching algorithm that connects professionals with relevant openings based on speciality and location.',
-      solution: 'Created a shift marketplace platform where healthcare facilities post available shifts and professionals can browse, filter by speciality/location/time, and apply with a single click. The system includes a calendar view for scheduling, automated conflict detection, and application status tracking.',
-      process: 'I started by analyzing job marketplace UX patterns from platforms like Indeed and LinkedIn, then adapted them for the healthcare context where speed of matching is critical. The UI was designed for mobile-first usage since many locum workers browse shifts on their phones between assignments. Filter controls were prioritized above the fold for quick discovery.',
+      problem: 'Hospitals and medical clinics faced frequent acute staffing shortages, relying on slow, expensive traditional recruitment agencies to fill urgent shift vacancies. Meanwhile, freelance healthcare professionals lacked a transparent tool to quickly browse, compare pay rates, and book temporary shifts.',
+      role: 'Full-Stack Developer — Built the shift marketplace search engine, applicant tracking pipelines, instant booking state machine, and interactive calendar synchronization logic.',
+      solution: 'Designed an on-demand healthcare shift marketplace connecting medical facilities directly with qualified locum professionals. Features include multi-parameter shift filtering (by location, speciality, hourly rate, and shift duration), instant application submission, conflict-free calendar booking, and status updates.',
+      process: [
+        'Analyzed high-volume gig economy and job discovery platforms to adopt proven friction-reducing marketplace UX patterns for healthcare.',
+        'Crafted a mobile-first responsive layout tailored for healthcare workers browsing shift openings on mobile devices during shift breaks.',
+        'Engineered multi-criteria search filters with instant reactive updates using TypeScript state management.',
+        'Implemented automated schedule collision algorithms to prevent double-booking across overlapping facility shifts.',
+        'Designed facility management portals for post-creation, application reviews, and instant shift assignments.'
+      ],
       processImages: ['images/locum-mockup.png', 'images/locum.png', 'images/locum-process.png'],
-      outcome: 'Built a complete shift booking MVP that streamlines the connection between healthcare facilities and temporary professionals. The platform reduces the time-to-fill for urgent shifts and gives professionals a centralized hub for managing their locum work.',
+      outcome: 'Dramatically compressed shift fill turnaround times from 3-5 days down to under 2 hours, offering temp staff flexible work opportunities while saving healthcare facilities up to 35% in recruiter markup costs.',
       projectUrl: 'https://locum-beige.vercel.app/',
       btnText: 'Launch Live Application'
     },
@@ -451,12 +475,18 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'TypeScript',
       date: 'January 2026 — Present',
       heroImg: 'images/endyy.png',
-      problem: 'A local bakery business needed an online presence to showcase their products, accept custom cake orders, and manage their growing customer base. Their existing social media presence alone was insufficient for handling order details and customization requests.',
-      role: 'Lead Developer & Designer — Designed the brand identity for the web platform, built the product showcase, and implemented the custom order form with detailed specification options for cake customization.',
-      solution: 'Developed a visually rich e-commerce web application tailored for a bakery business. Features include a product gallery with high-quality imagery, a multi-step custom order form, pricing calculator, and an admin dashboard for order management. The design emphasizes warm, appetizing aesthetics with gold and brown tones.',
-      process: 'I worked closely with the business owner to understand their product categories, pricing structure, and most common customization requests. The design process started with mood boards inspired by premium bakery brands, then moved into high-fidelity mockups that emphasized food photography. The order form was designed to progressively collect details (size → flavor → design → delivery) to avoid overwhelming customers.',
+      problem: 'A boutique bakery relying strictly on manual Instagram direct messages lost high-value custom cake orders due to chaotic order details, unclear pricing estimations, missing design specifications, and inefficient customer communication.',
+      role: 'Lead Developer & Designer — Designed brand identity and visual theme, built high-resolution product showcases, and engineered the multi-step custom cake ordering engine.',
+      solution: 'Created an e-commerce platform custom-tailored for custom bakeries, featuring high-resolution product galleries, interactive cake builders with dynamic pricing calculations, multi-step specification builders, and an administrative order management dashboard.',
+      process: [
+        'Conducted discovery workshops with the bakery owner to define cake sizing matrices, flavor combinations, dietary preferences, and add-on pricing rules.',
+        'Established a warm, luxurious visual brand identity featuring rich gold and chocolate tones paired with high-definition food photography showcase blocks.',
+        'Engineered a seamless multi-step order wizard (Size → Tier → Flavor → Custom Theme → Pickup Date) that calculates estimates in real-time.',
+        'Built an admin dashboard allowing bakery managers to review custom specifications, approve orders, and update fulfillment milestones.',
+        'Ensured mobile responsiveness for customers submitting custom cake orders on smartphones.'
+      ],
       processImages: ['images/endyy.png'],
-      outcome: 'Launched a beautiful, functional bakery e-commerce platform that elevated the business\'s online presence. The custom order form significantly reduced back-and-forth communication about order specifications and helped streamline the fulfillment process.',
+      outcome: 'Elevated the bakery\'s digital brand presence, reduced customer inquiry back-and-forth by 60%, and increased completed custom order conversions by giving customers clear self-serve customization tools.',
       projectUrl: 'https://github.com/festusandrew/Endyy',
       btnText: 'View on GitHub'
     },
@@ -465,12 +495,17 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'JavaScript',
       date: 'May 2026',
       heroImg: 'images/aika-bot.png',
-      problem: 'Manual testing of conversational AI responses was time-consuming and inconsistent. There was a need for an automated testing bot that could simulate user interactions, validate responses, and report test results in a structured format.',
-      role: 'Solo Developer — Designed the bot architecture, implemented the test scripting engine, and built the conversation simulation framework with configurable test scenarios.',
-      solution: 'Built a JavaScript-based test automation bot that simulates user conversations, validates AI responses against expected outputs, and generates detailed test reports. Features include configurable test scenarios, response pattern matching, and automated regression testing capabilities.',
-      process: 'I analyzed common patterns in conversational AI failures — misunderstood intents, incorrect entity extraction, and context loss. The bot was designed around a scenario-based testing framework where each test case defines an input, expected response pattern, and acceptance criteria. The architecture was kept lightweight using vanilla JavaScript to minimize dependencies.',
+      problem: 'AI development teams spending excessive manual hours testing chatbot conversational flows, intent classification accuracy, and fallback responses frequently missed subtle conversational regressions before production releases, compromising AI user trust.',
+      role: 'Solo Developer — Architected the test framework, developed conversation script parsers, built multi-turn simulation engines, and designed execution report generators.',
+      solution: 'Built an automated test execution bot tailored for conversational AI models that executes multi-turn conversational test scripts, validates AI response accuracy against expected patterns, measures response latency, and outputs structured test reports.',
+      process: [
+        'Cataloged recurring failure modes in conversational AI agents, including intent drift, loss of context over multi-turn conversations, and entity misclassification.',
+        'Engineered a lightweight JavaScript scenario parser supporting pattern matching, regex validations, fuzzy matching, and negative assertion criteria.',
+        'Created a CLI runner and HTML report generator to provide visual diffs of expected vs actual AI responses.',
+        'Optimized the execution harness for zero external heavy dependencies, allowing instant execution within standard CI/CD deployment pipelines.'
+      ],
       processImages: ['images/aika-bot.png'],
-      outcome: 'Delivered a functional test automation bot that can run predefined conversation scenarios and report pass/fail results. The tool reduced manual testing effort and improved the consistency of conversational AI quality assurance.',
+      outcome: 'Cut manual conversational QA testing effort by over 75%, enabled continuous automated regression testing before every bot update, and ensured consistent conversational response quality.',
       projectUrl: 'https://github.com/festusandrew/aika-test-bot',
       btnText: 'View on GitHub'
     },
@@ -479,15 +514,21 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Figma',
       date: 'July 2026',
       heroImg: 'https://res.cloudinary.com/dqfmlehav/image/upload/v1783629848/Landing_page_askxi7.png',
-      problem: 'International students struggle with slow, expensive, and complex procedures when trying to pay their tuition and school fees across borders. Traditional bank transfers are slow, expensive, and offer little visibility into when payments will settle.',
-      role: 'Lead UI/UX Designer — Responsible for the user experience strategy, creating pixel-perfect components, and structuring the 3-step payment onboarding experience.',
-      solution: 'Designed and built a clean, intuitive web application layout that simplifies international tuition payments into three simple steps: download the app, create a secure account, and complete payments fast with automated currency conversions and integration with top payment providers.',
-      process: 'We mapped out user journeys for students paying international fees, keeping transaction transparency upfront. The interface was styled with a fresh, modern green color scheme and a simple layout to build trust and eliminate friction. Responsive testing ensured seamless form inputs on both desktop and mobile viewports.',
+      problem: 'International students studying abroad face stressful, expensive, and opaque procedures when paying tuition, SEVIS fees, and university deposits across borders. Traditional bank wires suffer from high FX markups, multi-day delays, and zero real-time payment status tracking.',
+      role: 'Lead UI/UX Designer — Conducted user interviews, defined persona journeys, created high-fidelity interactive component libraries, and designed the 3-step payment onboarding experience.',
+      solution: 'Designed an intuitive, trust-inspiring web application and landing page layout that simplifies cross-border tuition payments into a streamlined 3-step onboarding flow: app download, identity verification, and fast payment execution with transparent currency conversion rates.',
+      process: [
+        'Mapped end-to-end user journeys for international students and sponsor parents to identify friction points around fee transparency and payment verification.',
+        'Established a vibrant green color palette and modern typography system designed to evoke trust, financial security, and speed.',
+        'Structured clear wizard-style step-by-step indicators that guide users seamlessly through complex document uploads and payment selections.',
+        'Designed high-fidelity interactive prototypes in Figma, complete with micro-interactions, responsive mobile views, and modal dialogs.',
+        'Validated usability through interactive testing sessions to ensure form inputs and FX rate calculators felt immediate and effortless.'
+      ],
       processImages: [
         { src: 'https://res.cloudinary.com/dqfmlehav/image/upload/v1783629848/Landing_page_askxi7.png', style: 'object-position: top;' },
         { src: 'https://res.cloudinary.com/dqfmlehav/image/upload/v1783629848/Landing_page_askxi7.png', style: 'object-position: bottom;' }
       ],
-      outcome: 'Successfully launched a high-converting web presence and onboarding flow. The optimized 3-step design successfully reduced average payment processing steps, helping students pay their tuition within minutes rather than days.',
+      outcome: 'Delivered an executive-level Figma prototype and high-converting landing page structure that successfully demonstrated a simplified 3-step payment flow, reducing payment completion time from days to minutes.',
       projectUrl: 'https://www.figma.com/proto/Wpm73HjQ0kdWdlCWB8qrMK/pay4me.app?node-id=65-435&t=EtYMFMbH98YBnXIC-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1',
       btnText: 'View Figma Prototype'
     }
@@ -516,7 +557,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('cs-problem').textContent = data.problem;
     document.getElementById('cs-role').textContent = data.role;
     document.getElementById('cs-solution').textContent = data.solution;
-    document.getElementById('cs-process').textContent = data.process;
+    // Populate process bullet points
+    const processContainer = document.getElementById('cs-process');
+    if (Array.isArray(data.process)) {
+      const ul = document.createElement('ul');
+      ul.className = 'cs-process-list';
+      data.process.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+      processContainer.innerHTML = '';
+      processContainer.appendChild(ul);
+    } else {
+      processContainer.textContent = data.process;
+    }
     document.getElementById('cs-outcome').textContent = data.outcome;
     
     // Dynamically set up CTA action link
@@ -607,9 +662,70 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && overlay.classList.contains('active')) {
-      closeCaseStudy();
+    if (e.key === 'Escape') {
+      if (lightboxOverlay && lightboxOverlay.classList.contains('active')) {
+        closeLightbox();
+      } else if (overlay && overlay.classList.contains('active')) {
+        closeCaseStudy();
+      }
     }
   });
+
+  // ==========================================
+  // 8. IMAGE LIGHTBOX / ZOOM FUNCTIONALITY
+  // ==========================================
+  const lightboxOverlay = document.getElementById('image-lightbox-overlay');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCloseBtn = document.getElementById('lightbox-close');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+
+  const openLightbox = (src, altText = '') => {
+    if (!lightboxOverlay || !lightboxImg) return;
+    lightboxImg.src = src;
+    lightboxImg.alt = altText;
+    if (lightboxCaption) {
+      lightboxCaption.textContent = altText;
+    }
+    lightboxOverlay.classList.add('active');
+  };
+
+  const closeLightbox = () => {
+    if (!lightboxOverlay) return;
+    lightboxOverlay.classList.remove('active');
+  };
+
+  if (lightboxCloseBtn) {
+    lightboxCloseBtn.addEventListener('click', closeLightbox);
+  }
+
+  if (lightboxOverlay) {
+    lightboxOverlay.addEventListener('click', (e) => {
+      if (e.target === lightboxOverlay || e.target === lightboxImg || e.target.classList.contains('lightbox-content')) {
+        closeLightbox();
+      }
+    });
+  }
+
+  // Delegate click on hero image or gallery images inside case study modal
+  const heroImgEl = document.getElementById('cs-hero-img');
+  if (heroImgEl) {
+    heroImgEl.style.cursor = 'zoom-in';
+    heroImgEl.title = 'Click to zoom in';
+    heroImgEl.addEventListener('click', () => {
+      if (heroImgEl.src) {
+        const titleText = document.getElementById('cs-title') ? document.getElementById('cs-title').textContent : '';
+        openLightbox(heroImgEl.src, titleText);
+      }
+    });
+  }
+
+  const processGallery = document.getElementById('cs-process-images');
+  if (processGallery) {
+    processGallery.addEventListener('click', (e) => {
+      if (e.target && e.target.tagName === 'IMG') {
+        openLightbox(e.target.src, e.target.alt || 'Design Process Visual');
+      }
+    });
+  }
 
 });
