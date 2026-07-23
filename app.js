@@ -253,10 +253,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggleBtn = document.getElementById('theme-toggle');
   const themeToggleMobile = document.getElementById('theme-toggle-mobile');
   
-  // Check for saved theme preference or default to dark
+  // Check for saved theme preference or default to light mode
   const savedTheme = localStorage.getItem('theme');
   
-  if (savedTheme === 'light') {
+  if (savedTheme === 'dark') {
+    document.documentElement.classList.remove('light-mode');
+  } else {
     document.documentElement.classList.add('light-mode');
   }
   
