@@ -1,0 +1,16 @@
+# Festus Andrew — Senior UI/UX Designer & Design Engineer
+
+> Senior UI/UX Designer and Design Engineer with 4+ years of experience shipping production design systems in Figma, SaaS interfaces, and high-performance TypeScript/React frontend applications. Available for remote full-time, contract, and freelance roles across the European Union (EU), United Kingdom (UK), and global startup ecosystems.
+
+## Core Specializations
+- **UI/UX & Product Design**: Design Systems in Figma, SaaS UX Architecture, User Journey Mapping, Rapid Interactive Prototyping.
+- **Frontend & Design Engineering**: TypeScript, React.js, Next.js, HTML5, CSS3, Component Libraries, Figma-to-Code Implementation.
+- **European Startup Experience**: Designed 70+ screens for MployUs Ireland (Irish HR & locum healthtech platform) enforcing WCAG compliance.
+- **Remote Availability**: Operating seamlessly across European timezones (CET, BST/GMT, WEST) and US EST.
+
+## Contact & Hiring
+- Portfolio: https://festusandrew.online
+- Email: festusandrew23@gmail.com
+- LinkedIn: https://linkedin.com/in/festus-andrew
+- GitHub: https://github.com/festusandrew
+- Twitter/X: https://x.com/FestCreates

@@ -486,6 +486,58 @@ img {
   line-height: 1.4;
 }
 
+/* Remote Work Availability Badge */
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(197, 255, 65, 0.08);
+  border: 1px solid rgba(197, 255, 65, 0.25);
+  color: var(--accent-lime);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 8px 16px;
+  border-radius: 24px;
+  margin-bottom: 24px;
+  width: fit-content;
+  backdrop-filter: blur(8px);
+}
+
+.status-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-lime);
+  position: relative;
+  box-shadow: 0 0 8px var(--accent-lime);
+  flex-shrink: 0;
+}
+
+.status-pulse-dot::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent-lime);
+  animation: pulse-ring 2s infinite ease-out;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+html.light-mode .availability-badge {
+  background-color: rgba(102, 156, 0, 0.08);
+  border-color: rgba(102, 156, 0, 0.25);
+  color: var(--accent-lime);
+}
+
 .hero-main-title {
   font-family: var(--font-title);
   font-size: clamp(2.5rem, 5.2vw, 3.8rem);
