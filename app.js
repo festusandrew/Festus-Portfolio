@@ -206,11 +206,22 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.textContent = 'Sending...';
       submitBtn.disabled = true;
       
+      const nameVal = document.getElementById('form-name').value.trim();
+      const emailVal = document.getElementById('form-email').value.trim();
+      const phoneVal = document.getElementById('form-phone') ? document.getElementById('form-phone').value.trim() : '';
+      const subjectVal = document.getElementById('form-subject').value.trim();
+      const messageVal = document.getElementById('form-message').value.trim();
+
       const formData = {
-        name: document.getElementById('form-name').value,
-        email: document.getElementById('form-email').value,
-        subject: document.getElementById('form-subject').value,
-        message: document.getElementById('form-message').value
+        name: nameVal,
+        email: emailVal,
+        phone: phoneVal || 'Not provided',
+        subject: subjectVal,
+        message: messageVal,
+        _subject: `New Portfolio Message: ${subjectVal} (from ${nameVal})`,
+        _replyto: emailVal,
+        _template: 'table',
+        _captcha: 'false'
       };
       
       // Post to FormSubmit AJAX endpoint
@@ -229,20 +240,29 @@ document.addEventListener('DOMContentLoaded', () => {
         return response.json();
       })
       .then(data => {
-        // Fade out form and display success card
-        contactForm.style.opacity = '0';
-        setTimeout(() => {
-          contactForm.style.display = 'none';
-          successAlert.classList.add('show');
-        }, 300);
+        if (data.success === 'true' || data.success === true) {
+          // Fade out form and display success card
+          contactForm.style.opacity = '0';
+          setTimeout(() => {
+            contactForm.style.display = 'none';
+            successAlert.classList.add('show');
+          }, 300);
+        } else if (data.message && data.message.includes('Activation')) {
+          // FormSubmit needs one-time email activation
+          submitBtn.textContent = 'Activation Email Sent!';
+          alert('FormSubmit has sent an activation link to festusandrew23@gmail.com. Please open that email and click "Activate Form" once to start receiving messages!');
+          submitBtn.disabled = false;
+        } else {
+          throw new Error(data.message || 'Submission failed');
+        }
       })
       .catch(error => {
-        // Fallback or alert on error
+        console.error('Contact form submission error:', error);
         submitBtn.textContent = 'Error! Try Again';
         submitBtn.disabled = false;
         setTimeout(() => {
           submitBtn.textContent = originalText;
-        }, 3000);
+        }, 4000);
       });
     });
   }

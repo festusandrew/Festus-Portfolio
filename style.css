@@ -155,12 +155,13 @@ img {
   border: 1px solid var(--border-color);
   border-radius: 36px;
   z-index: 1000;
+  box-shadow: none;
   transition: var(--transition-smooth);
 }
 
 .floating-header:hover {
   border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: none;
 }
 
 .nav-container {
@@ -451,13 +452,9 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: var(--transition-smooth);
+  box-shadow: none;
 }
 
-.hero-card:hover {
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
 
 .profile-header {
   display: flex;
@@ -585,13 +582,8 @@ html.light-mode .social-icon-btn:hover {
   font-size: 2rem;
   color: var(--text-primary);
   margin-bottom: 4px;
-  transition: var(--transition-fast);
 }
 
-.stat-card:hover .stat-number {
-  color: var(--accent-lime);
-  transform: translateY(-2px);
-}
 
 .stat-label {
   font-family: var(--font-ui);
@@ -622,12 +614,8 @@ html.light-mode .social-icon-btn:hover {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.hero-media:hover .hero-portrait {
-  transform: scale(1.05) rotate(1deg);
-}
 
 /* TICKER / MARQUEE */
 .marquee-section {
@@ -838,14 +826,9 @@ html.light-mode .social-icon-btn:hover {
   border: 1px solid var(--border-color);
   border-radius: 24px;
   padding: 32px 40px;
-  transition: var(--transition-smooth);
+  box-shadow: none;
 }
 
-.experience-card:hover {
-  border-color: rgba(255, 255, 255, 0.08);
-  transform: scale(1.01);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
 
 .exp-header {
   display: flex;
@@ -1657,11 +1640,11 @@ html.light-mode body {
 html.light-mode .floating-header {
   background-color: rgba(247, 246, 243, 0.8);
   border-color: var(--border-color);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  box-shadow: none;
 }
 html.light-mode .floating-header:hover {
   border-color: rgba(0, 0, 0, 0.12);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
 }
 html.light-mode .brand-avatar {
   filter: none;
@@ -1752,9 +1735,7 @@ html.light-mode .blog-link {
 html.light-mode .blog-card:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
-html.light-mode .hero-card:hover,
 html.light-mode .project-card:hover,
-html.light-mode .experience-card:hover,
 html.light-mode .blog-card:hover {
   border-color: rgba(0, 0, 0, 0.08);
 }
